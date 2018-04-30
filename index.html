@@ -13,18 +13,25 @@
 	<body>
 		<div class="pagewrapper">
 			<div class="tabwrapper">
-				<div class="tab" data-tabid="0">Tab 0</div>
+				<div class="tab" data-tabid="0" data-tabdefault>Tab 0</div>
 				<div class="tab" data-tabid="123">Tab 123</div>
 				<div class="tab" data-tabid="hi">Tab hi</div>
-				<div class="tab" data-tabid="">Tab empty</div>
-				<div class="tab" data-tabid="3">Tab 3</div>
-				<div class="tab" data-tabid="notfound">Tab notfound</div>
 			</div>
 			<div class="contentwrapper">
-				<div class="tabcontent" data-tabid="0">test: 0</div>
+				<div class="tabcontent" data-tabid="0">
+					<span>test: 0</span>
+					<div class="tabwrapper">
+						<div class="tab" data-tabid="00" data-tabgroup="G0">Tab 00</div>
+						<div class="tab" data-tabid="01" data-tabgroup="G0" data-tabdefault>Tab 01</div>
+						<div class="tab" data-tabid="02" data-tabgroup="G0">Tab 02</div>
+					</div>
+					<div class="contentwrapper">
+						<div class="tabcontent" data-tabid="00" data-tabgroup="G0">G0 - 00</div>
+						<div class="tabcontent" data-tabid="01" data-tabgroup="G0">G0 - 01</div>
+						<div class="tabcontent" data-tabid="02" data-tabgroup="G0">G0 - 02</div>
+					</div>
+				</div>
 				<div class="tabcontent" data-tabid="123">test: 123</div>
-				<div class="tabcontent" data-tabid="">test: empty</div>
-				<div class="tabcontent" data-tabid="3">test: 3</div>
 				<div class="tabcontent" data-tabid="hi">test: hi</div>
 			</div>
 		</div>
