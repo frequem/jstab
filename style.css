@@ -1,0 +1,18 @@
+:root{
+	--main-bg-color: #333;
+	--main-text-color: white;
+}
+
+html, body{
+	margin: 0;
+	height: 100%;
+}
+
+body{
+	background: var(--main-bg-color);
+	color: var(--main-text-color);
+}
+
+.pagewrapper{
+	height: 100%;
+}

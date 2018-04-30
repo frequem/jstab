@@ -1,0 +1,63 @@
+:root{
+	--tab-bg-color: #008e76;
+	--tab-hover-color: black;
+	--tab-separator-color: var(--main-bg-color);
+	--tab-text-color: white;
+}
+
+.tabwrapper{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.tab{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 36px;
+	background: var(--tab-bg-color);
+	color: var(--tab-text-color);
+	font-family: sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-user-select: none;    
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.tab:hover{
+	background: var(--tab-hover-color);
+}
+
+.tab:not(:first-child) {
+    border-left: 1px solid var(--tab-separator-color);
+}
+
+.tab.active{
+	background: inherit;
+	color: inherit;
+	cursor: default;
+}
+
+.contentwrapper{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.tabcontent{
+	flex: 1;
+	display: none;
+	margin: 8px;
+}
+
+.tabcontent.visible{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 0;
+}
